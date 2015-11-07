@@ -65,8 +65,8 @@ public class TableViewController<Object, View: UIView>: UITableViewController, H
         let viewControllerClass: HostedViewController<Object, View>.Type = try! self.dynamicType.viewControllerClassForModelType(modelType)
 
         let variant = variantForObject(object)
-        let reuseIdentifer = viewControllerClass.reuseIdentifierForObject(object, variant: variant)
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifer, forIndexPath: indexPath) as! HostingTableViewCell<Object, View>
+        let reuseIdentifier = viewControllerClass.reuseIdentifierForObject(object, variant: variant)
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! HostingTableViewCell<Object, View>
         let hostedViewController = cell.hostedViewController
         
         willLoadHostedViewController(hostedViewController)

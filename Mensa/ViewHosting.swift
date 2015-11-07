@@ -82,7 +82,7 @@ extension HostingCell {
     public static func subclassWithViewControllerClass(viewControllerClass: HostedViewController<ObjectType, ViewType>.Type, modelType: ObjectType.Type, variant: Int) -> CellClass {
         let bundle = NSBundle(forClass: self)
         let modelTypeName = TypeKey(modelType).localDescription
-        let className = TypeKey<Any>(self, viewControllerClass, modelType).description
+        let className = TypeKey<Any>(self, viewControllerClass, modelType, variant).description
         var subclass: AnyClass? = NSClassFromString(className)
         if subclass == nil {
             subclass = objc_allocateClassPair(self, className.cStringUsingEncoding(NSUTF8StringEncoding)!, 0)

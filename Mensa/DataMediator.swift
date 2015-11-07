@@ -6,8 +6,7 @@
 //  Copyright © 2015 Tangible. All rights reserved.
 //
 
-import UIKit.UITableViewCell
-import UIKit.UIViewController
+import UIKit
 
 typealias HostedViewControllerClass = HostedViewControllerType.Type
 typealias DataMediatorDelegateType = DataMediatorDelegate.Type

@@ -39,8 +39,8 @@ class ObjectCollectionViewController: CollectionViewController<Object, UIView> {
 
     // MARK: DataMediatorDelegate
     override func variantForObject(object: Object) -> Int {
-        if object is PrimeFlag {
-            return PrimeFlagView.Style.Compact.rawValue
+        if object is PrimeFlag && ((object as! PrimeFlag).number.value > 30) {
+            return 1
         }
         return super.variantForObject(object)
     }
